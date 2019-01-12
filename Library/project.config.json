@@ -7,8 +7,8 @@
 		"minified": true,
 		"newFeature": true
 	},
-	"appid": "wx5f67b5e51768167a",
-	"projectname": "oldbookstores",
+	"appid": "wx79009c9fa709a383",
+	"projectname": "ticLibrary",
 	"libVersion": "2.4.2",
 	"condition": {
 		"search": {

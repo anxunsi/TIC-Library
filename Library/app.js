@@ -44,7 +44,7 @@ App({
     }
     else {
       wx.cloud.init({
-        env: 'oldbookstores-96930d',
+        env: 'library-test-0c5888',
         traceUser: true
       })
     }
