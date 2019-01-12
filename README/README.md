@@ -14,5 +14,5 @@
 5. 修改app.js里的env为自己的环境ID
    ![change env1](change-env.jpg)
    ![change env2](env-changed.jpg)
-6. 在云开发里创建一个"publish"的collection
+6. 在云开发里创建三个叫"publish", "sell", "buy"的collection
    ![create collection](create-collection.jpg)
