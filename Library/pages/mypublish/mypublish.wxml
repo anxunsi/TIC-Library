@@ -1,0 +1,24 @@
+<!--pages/mypublish/mypublish.wxml-->
+<view class='all'>
+  <view class='Topbar'>
+    <view class='border'></view>
+    <text class='Toptitle'>我发布的</text>
+  </view>
+  <scroll-view class='list'>
+    <block wx:for='{{dataList}}' wx:key='list' wx:for-item="item">
+      <view class="list_item">
+          <view class='img'>
+            <image src="{{imghref}}{{item.bookInfo.image}}"  mode="scaleToFill"/>
+          </view>
+          <view class='info'>
+            <view class='title'>《{{item.bookInfo.title}}》</view>
+            <view class='price'>￥{{item.bookSale}}</view>
+            <view class='num'>库存量：{{item.bookNumber}}</view>
+            <view class='time'>发布时间：{{item.date}}</view>
+          </view>
+          <view class='clear'></view>
+      </view>
+    </block>
+  </scroll-view>
+
+</view>

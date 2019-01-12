@@ -1,0 +1,63 @@
+/* pages/userInfo/userInfo.wxss */
+.all{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: whitesmoke;
+}
+.infoList{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: white;
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 2rpx solid gainsboro;
+}
+.infoTitle{
+  font-size: 32rpx;
+  position: fixed;
+  left: 30rpx;
+}
+.infoContent{
+  position: fixed;
+  right: 80rpx;
+  font-size: 32rpx;
+  color: gray;
+}
+.infoText{
+  height: 50rpx;
+  width: 320rpx;
+  position: fixed;
+  right: 80rpx; 
+  font-size: 32rpx;
+  color: gray;
+  text-align: right;
+}
+.icon-right{
+  height: 40rpx;
+  width: 40rpx;
+  position: fixed;
+  right: 10rpx;
+}
+.blank{
+  height: 20rpx;
+  width: 100%;
+  background: whitesmoke;
+}
+.save-btn{
+  width: 80%;
+  height: 70rpx;
+  background: #FF6347;
+  font-size: 50rpx;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  border-radius: 10rpx;
+  margin-top: 50rpx;
+}

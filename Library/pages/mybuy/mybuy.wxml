@@ -1,0 +1,37 @@
+<!--pages/mybuy/mybuy.wxml-->
+<view class='all'>
+  <view class='Topbar'>
+    <view class='border'></view>
+    <text class='Toptitle'>我买到的</text>
+  </view>
+<scroll-view class='list'>
+  <view class='orderListitem' wx:for='{{dataList}}' wx:key='list' wx:for-item="item">
+    <view class='list_top'>
+      <view class='sellerInfo'>卖家：{{item.saler}}</view>
+      <view class='ordernumber'>订单号：{{item._id}}</view>
+      <view class='orderdate'>订单日期：{{item.buyDate}}</view>
+    </view>
+    <view class='blank'></view>
+    <view class="list_item">
+        <view class='img'>
+          <image src="{{item.image}}"  mode="scaleToFill"/>
+        </view>
+        <text class='title'>《{{item.title}}》</text>
+        <view class='info'>
+          <view class='price'>￥{{item.buyPrice}}</view>
+          <view class='num'>x{{item.buyNumber}}</view>
+        </view>
+    </view>
+    <view class='list_botton'>
+      <view class='goodsInfo'>
+        <view class='moneyInfo'>总额 ￥{{item.buyNumber*item.buyPrice}}</view>
+      </view>
+      <view class='option'>
+        <view class='ordercomment' bindtap='ordercomment'>评价</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+</view>
+

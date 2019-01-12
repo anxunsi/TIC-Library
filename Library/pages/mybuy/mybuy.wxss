@@ -1,0 +1,175 @@
+/* pages/mybuy/mybuy.wxss */
+page{
+  height: 100%;
+}
+.all{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: whitesmoke;
+  height: 100%;
+  width: 100%;
+}
+.Topbar{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  background: white;
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.border{
+  height: 60rpx;
+  border-left: 5rpx solid #FF6347;
+  position: absolute;
+  left: 30rpx;
+}
+.Toptitle{
+  font-size: 32rpx;
+  position: absolute;
+  left: 50rpx;
+}
+navigator{
+  display:inline;
+}
+.list{
+  margin-top: 100rpx;
+  background: whitesmoke;
+}
+.orderListitem{
+  background: white;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.list_top{
+  height: 150rpx;
+  width: 100%;
+  
+  
+}
+.sellerInfo{
+  position: relative;
+  top:10rpx;
+  color:#747474;
+  margin-left:30rpx;
+  font-size:32rpx;
+}
+.ordernumber{
+  position: relative;
+  top:10rpx;
+  color:#747474;
+  margin-left:30rpx;
+  font-size:32rpx;
+}
+.orderdate{
+  position: relative;
+  top:10rpx;
+  color:#747474;
+  margin-left:30rpx;
+  font-size:32rpx;
+}
+.blank{
+  border: 1rpx solid #E8E8E8;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.list_item{
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx;
+  margin-top: 10rpx;
+  height:250rpx;
+  width: 100%;
+}
+.img{
+  margin-left: 30rpx;
+  margin-top: 0rpx;
+  width:20%;
+  height:100%;
+}
+.img image{
+   width:100%;
+   height:100%;
+}
+.title{
+  width: 450rpx;
+  color:#333;
+  
+  margin-left:10rpx;
+  margin-top: 10rpx;
+  font-size: 35rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.price{
+  color:#FF2727;
+  margin-top: 10rpx;
+  margin-left:10rpx;
+  font-size:32rpx;
+}
+.num{
+  color:#747474;
+  margin-left:10rpx;
+  font-size:32rpx;
+}
+.list_botton{
+  display: flex;
+  flex-direction: column;
+  height: 150rpx;
+}
+.goodsInfo{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 550rpx;
+}
+.moneyInfo{
+  color:#333;
+  font-size:35rpx;
+}
+.option{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 500rpx;
+  margin-top: 20rpx;
+}
+.deleteOrder{
+  width: 150rpx;
+  border: 1rpx solid #747474;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  padding:5rpx ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ordercomment{
+  width: 150rpx;
+  border: 1rpx solid #FF2727;
+  color: #FF2727;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  margin-left: 50rpx;
+  padding: 5rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

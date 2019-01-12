@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/userCenter/userCenter",
+    "pages/publish/publish",
+    "pages/mypublish/mypublish",
+    "pages/mysell/mysell",
+    "pages/mybuy/mybuy",
+    "pages/about/about",
+    "pages/search/search",
+    "pages/detail/detail",
+    "pages/userInfo/userInfo",
+    "pages/uploadBooks/uploadBooks"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FF6347",
+    "navigationBarTitleText": "二手书城",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/index1.png",
+      "selectedIconPath": "images/index2.png"
+    },{
+      "pagePath": "pages/publish/publish",
+      "text": "发布",
+      "iconPath": "images/publish1.png",
+      "selectedIconPath": "images/publish2.png"
+    },{
+      "pagePath": "pages/userCenter/userCenter",
+      "text": "用户中心",
+      "iconPath": "images/user1.png",
+      "selectedIconPath": "images/user2.png"
+    }
+    ]
+  }
+}

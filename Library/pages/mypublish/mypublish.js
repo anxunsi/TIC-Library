@@ -1,0 +1,116 @@
+// pages/mypublish/mypublish.js（“我的发布”页面）
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    control: true,
+    nickname: '',
+    dataList: []
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    var that = this
+
+    if (options.nickname == 'undefined') {
+      that.setData({
+        control: false
+      })
+
+      wx.showToast({
+        title: '没有获得用户授权，无法显示相关信息',
+        icon: 'none',
+        duration: 2000
+      })
+
+      setTimeout(function() {
+        wx.navigateBack({
+          delta: 1,
+        })
+      },2000)
+    } else {
+      that.setData({
+        nickname: options.nickname
+      })
+    }
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    var that = this
+
+    if (that.data.control) {
+      wx.showLoading({
+        title: '信息加载中',
+      })
+
+      that.getDataList()
+    }
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+
+  /**
+   * 加载数据
+   */
+  getDataList:function (){
+    var that = this
+
+    const db = wx.cloud.database();
+    db.collection('publish').where({
+      saler: that.data.nickname
+    }).get().then(res => {
+      that.setData({
+        dataList: res.data
+      })
+
+      wx.hideLoading()
+    })
+  }
+})

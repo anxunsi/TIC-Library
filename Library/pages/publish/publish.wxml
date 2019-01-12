@@ -1,0 +1,5 @@
+<!--pages/publish/publish.wxml-->
+<view class='all'>
+  <image class='scan-img' src='../../images/camera.png' mode="aspectFill"></image>
+  <view class='scan-btn' bindtap='scanbtn'>扫码卖书</view>
+</view>

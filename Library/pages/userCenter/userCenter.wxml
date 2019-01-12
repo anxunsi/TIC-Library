@@ -1,0 +1,47 @@
+<!--pages/userCenter/userCenter.wxml-->
+<view class='all'>
+  <view class='user'>
+    <view class="userinfo">
+      <block wx:if="{{!hasUserInfo && canIUse}}">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="../../images/notlogin.png" mode="cover"></image>
+        <button  class="userLogin-btn" mode='scaleToFill' open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即登录</button>
+      </block>
+      <block wx:else>
+        <image bindtap="userInfo" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+  </view>
+
+  <view class="usermotto" bindtap='mypublish'>
+    <image class='img' src='../../images/Mypublish.png' mode='scaleToFill'></image>
+    <text class="user-motto" >我的发布</text>
+    <image class='img_go' src='../../images/right.png' mode='scaleToFill'></image>
+  </view>
+
+  <view class="usermotto" bindtap='mysell'>
+    <image class='img' src='../../images/sell.png' mode='scaleToFill'></image>
+    <text class="user-motto" >我卖出的</text>
+    <image class='img_go' src='../../images/right.png' mode='scaleToFill'></image>
+  </view>
+
+  <view class="usermotto" bindtap='mybuy'>
+    <image class='img' src='../../images/buy.png' mode='scaleToFill'></image>
+    <text class="user-motto" >我买到的</text>
+    <image class='img_go' src='../../images/right.png' mode='scaleToFill'></image>
+  </view>
+
+  <view class='blank'></view>
+
+  <view class="usermotto">
+    <image class='img' src='../../images/feedback.png' mode='scaleToFill'></image>
+    <button class="userFeedback-btn" open-type='contact'>问题反馈</button>
+    <image class='img_go' src='../../images/right.png' mode='scaleToFill'></image>
+  </view>
+  
+  <view class="usermotto" bindtap='about'>
+    <image class='img' src='../../images/about.png' mode='scaleToFill'></image>
+    <text class="user-motto" >关于二手书城</text>
+    <image class='img_go' src='../../images/right.png' mode='scaleToFill'></image>
+  </view>
+</view>

@@ -1,0 +1,55 @@
+<!--pages/uploadBooks/uploadBook.wxml-->
+<view class='all'>
+  <view class='infoList'>
+    <text class='infoTitle'>书名</text>
+    <text class='infoContent'>{{bookInfo.title}}</text>
+  </view>
+
+  <view class='infoList'>
+    <text class='infoTitle'>作者</text>
+    <text class='infoContent'>{{bookInfo.author}}</text>
+  </view>
+
+  <view class='infoList'>
+    <text class='infoTitle'>出版社</text>
+    <text class='infoContent'>{{bookInfo.publisher}}</text>
+  </view>
+
+  <view class='infoList'>
+    <text class='infoTitle'>出版年</text>
+    <text class='infoContent'>{{bookInfo.pubdate}}</text>
+  </view>
+
+  <view class='infoList'>
+    <text class='infoTitle'>原价</text>
+    <text class='infoContent'>{{bookInfo.price}}</text>
+  </view>
+
+  <view class='blank'></view>
+
+  <view class='infoList'>
+    <text class='infoTitle'>出售价</text>
+    <input class='infoContent' placeholder='{{bookSale}}' maxlength='6' bindinput='changeBookSale'></input>
+  </view>
+
+  <view class='infoList'>
+    <text class='infoTitle'>出售数量</text>
+    <input class='infoContent' placeholder='{{bookNumber}}'  maxlength='3' bindinput='changeBookNumber'></input>
+  </view>
+
+  <view class='imgList'>
+    <block>
+      <view class="imgItem-Square imgItem-Cross" bindtap="uploadPic" wx:if="{{!isSrc}}"></view>
+      <view wx:if="{{isSrc}}" class="imgBox">
+        <view class="imgShow">
+          <image class='img1' src="{{src}}" mode="aspectFit"></image>
+          <image class='img2' src="../../images/cancel.png" mode="aspectFit" bindtap="clearPic"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class='save-btn' bindtap='publish'>发布</view>
+
+</view>
+

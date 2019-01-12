@@ -1,0 +1,101 @@
+.clear{
+  clear: both;
+  overflow: hidden;
+}
+.banner{
+  height: 300px;
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+ 
+/*分享*/
+.fenxiang button::after{
+  border: none;
+}
+.fenxiang{
+  text-align: center; 
+  font-size: 12px; 
+  color:#999;
+  width: 50px;
+  line-height: 20px;
+  overflow: hidden;
+  float: right;
+}
+.fenxiang image{
+  width: 20px;
+  height: 20px;
+}
+.fxbtn{
+  background: none;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 0px;
+  font-size: 12px;
+}
+ 
+ /*价格*/
+.info-title{ 
+  background: #fff; 
+  padding: 10px 15px;
+  font-size: 23px;
+}
+.info-price{
+  border-bottom:1px solid #F6F6F6;
+  background: #fff;
+  padding: 0px 15px;
+}
+.price{ 
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  color:#FF6666;
+  font-size: 25px; 
+} 
+.price em{
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+.details_box{ 
+  margin-top: 10px;
+  padding: 0 15px;
+  font-size: 13px;
+  background:#fff;
+}
+
+ 
+ /*底部浮动*/
+.foot-nav{ 
+  height: 46px;
+  width: 100%;
+}
+.foot-nav .con{ 
+  position: fixed; 
+  height: 46px; 
+  width: 40%;
+  float: right; 
+  bottom: 0; 
+  right: 0; 
+  background: none;
+  z-index: 999;
+}
+.add-cart .add-cart-btn{
+  background: linear-gradient(to right,#FF7A34, #EE32FF);
+  color: #fff;
+  border-radius: 50px; 
+  padding: 0px;
+  width: 100%;
+  height: 35px; 
+  line-height: 35px;
+  margin-top: 5px;
+  margin-right: 15px;
+}
+.btn{
+  display: flex;
+  justify-content: center;  
+  width: 100%;
+  height: 100%;
+}

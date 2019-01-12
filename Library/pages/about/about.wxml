@@ -1,0 +1,7 @@
+<!--pages/about/about.wxml-->
+<view class='all'>
+  <image class='img' src='../../images/timg.jpg' ></image>
+  <text class='title'>二手书城</text>
+  <text class='version'>v1.1.1 Beta</text>
+  <text class='content'>二手书城是由深大巴啦啦小魔仙团队打造，我们致力于提供一个平台能让大家共享自己的图书，共享知识，将图书循环利用下去....</text>
+</view>

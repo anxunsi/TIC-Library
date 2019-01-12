@@ -1,0 +1,20 @@
+/* pages/publish/publish.wxss */
+.all{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.scan-img{
+  height: 300rpx;
+  width: 300rpx;
+  position: fixed;
+  top: 300rpx;
+}
+.scan-btn{
+  border:  2rpx solid #FF6347;
+  border-radius: 10rpx;
+  position: fixed;
+  bottom: 300rpx;
+  color: #FF6347;
+}

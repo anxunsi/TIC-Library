@@ -1,0 +1,113 @@
+/* pages/uploadBooks/uploadBook.wxss */
+.all{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: whitesmoke;
+}
+.infoList{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: white;
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 2rpx solid gainsboro;
+}
+.infoTitle{
+  font-size: 32rpx;
+  position: fixed;
+  left: 30rpx;
+}
+.infoContent{
+  position: fixed;
+  left: 200rpx;
+  font-size: 32rpx;
+  color: gray;
+}
+
+/*图片选择*/
+.imgList{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: white;
+  width: 100%;
+  height: 250rpx;
+  border-bottom: 2rpx solid gainsboro;
+}
+.imgItem-Square {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #888;
+    margin: 20rpx;
+    margin-right: 0;
+    width: 135rpx;
+    height: 135rpx;
+    border: 1rpx solid #e5e5e5;
+    border-radius: 5rpx;
+}
+.imgItem-Cross::before, .imgItem-Cross::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #e5e5e5;
+}
+.imgItem-Cross::before {
+    width: 10rpx;
+    height: 80rpx;
+    margin-top: -40rpx;
+    margin-left: -5rpx;
+}
+.imgItem-Cross::after {
+    width: 80rpx;
+    height: 10rpx;
+    margin-top: -5rpx;
+    margin-left: -40rpx;
+}
+.imgBox {
+  width: 25%;
+  padding: 0rpx;
+}
+.imgShow {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+}
+.img1 {
+  width: 100%;
+  height: 180rpx;
+}
+.img2{
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  width: 15px;
+  height: 15px;
+}
+
+.blank{
+  height: 20rpx;
+  width: 100%;
+  background: whitesmoke;
+}
+.save-btn{
+  width: 80%;
+  height: 70rpx;
+  background: #FF6347;
+  font-size: 50rpx;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  border-radius: 10rpx;
+  margin-top: 50rpx;
+}

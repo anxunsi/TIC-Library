@@ -1,0 +1,56 @@
+<!--商品幻灯片-->
+<swiper indicator-dots='true' autoplay='true' interval='5000' class="banner" duration='1000' circular="{{duration}}">
+  <block wx:for="{{image}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" mode="aspectFill" data-src='{{item.img}}' bindtap="previewImage"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!--商品幻灯片 end-->
+<view class="info-price clear">
+  <view class='price'>￥{{bookSale}} </view>
+  <view class='fenxiang'>
+      <button class='fxbtn' open-type="share">
+        <view style='height:20px;margin-top:8px;'><image src='../../images/share.png' mode="aspectFill" ></image></view>
+        <view>分享</view>
+      </button>
+  </view>
+</view>
+
+<view class="info-title">
+    <text>《{{bookInfo.title}}》</text>
+</view>
+ 
+<view style="border-top:1px solid #F6F6F6;background: #fff; padding:5px 15px;">
+    <view class="clearfix flex grey gridXt">
+      <text class="sub">剩余数量：{{bookNumber}}</text>
+    </view>
+</view>
+
+<!--商品详情-->
+<view class='details_box'>
+  <view style="height:40px;line-height: 40px;border-bottom:1px solid #f5f5f5;">
+     <view>商品详情</view>
+  </view>
+  <view style='padding:10px 0px;'>
+      <view class="wxParse">
+         {{bookInfo.summary}}
+      </view>
+    </view>
+</view>
+ 
+<!--底部浮动 start-->
+<view class="foot-nav mt15">
+  <view class="flex con gridXt tc">
+    <view class="add-cart sub f16">
+      <picker class='add-cart-btn'
+              mode='selector' 
+              range='{{selection}}'
+              value='{{number}}'
+              bindchange='buy'>
+              <view class='btn'>立即购买</view>
+              </picker>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,95 @@
+/* pages/mypublish/mypublish.wxss */
+page{
+  height: 100%;
+}
+.all{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: whitesmoke;
+  height: 100%;
+  width: 100%;
+}
+.Topbar{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  background: white;
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.border{
+  height: 60rpx;
+  border-left: 5rpx solid #FF6347;
+  position: fixed;
+  left: 30rpx;
+}
+.Toptitle{
+  font-size: 32rpx;
+  position: fixed;
+  left: 50rpx;
+}
+
+navigator{
+  display:inline;
+}
+.list{
+  margin-top: 100rpx;
+}
+ 
+.list_item{
+  background: white;
+  margin-top:10rpx;
+  margin-bottom: 10rpx;
+  padding: 10rpx;
+  height:250rpx;
+  border-bottom:1px solid #E8E8E8;
+}
+.img{
+  float:left;
+  width:30%;
+  height:100%;
+}
+.img image{
+   width:100%;
+   height:100%;
+}
+.info{
+  width:70%;
+  float:right;
+  height:100px;
+  position:relative;
+}
+.title{
+  position: absolute;
+  top:10rpx;
+  color:#333;
+  margin-left:10rpx;
+  font-size: 30rpx;
+}
+.price{
+  position: absolute;
+  top:50rpx;
+  color:#FF2727;
+  margin-left:10rpx;
+  font-size:32rpx;
+}
+.num{
+  position: absolute;
+  top:90rpx;
+  color:#747474;
+  margin-left:10rpx;
+  font-size:32rpx;
+}
+.time{
+  position: absolute;
+  top:130rpx;
+  color:#747474;
+  margin-left:10rpx;
+  font-size:32rpx;
+}
+

@@ -1,0 +1,66 @@
+<!--pages/search/search.wxml-->
+<view class='all'>
+  <view class='search-top'>
+    <view class="index_search_btn" >
+      <image class="index_search" src="../../images/search.png"></image>
+      <input class='search_input' placeholder="搜索图书" bindinput='searchBook'></input>
+    </view>
+  </view>
+
+  <view class="tabTit box">
+    <view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="type" data-index="{{index}}" bindtap="filterTab">
+      <text>{{item}}</text>
+      <image src="../../images/arrow.png"></image>
+    </view>
+  </view>
+
+  <!--筛选项-->
+  <view class="tabLayer" hidden="{{tab[0]}}">
+    <block wx:for="{{typeList}}"  wx:for-item="item">
+      <text class="{{type_id==item.id?'active':''}}" 
+            data-id="{{item.id}}" 
+            data-index="0" 
+            data-txt="{{item.title}}" 
+            bindtap="filter">{{item.title}}</text>
+    </block>
+  </view>
+
+  <view class="tabLayer" hidden="{{tab[1]}}">
+    <block wx:for="{{commentList}}" wx:for="{{priceList}}"  wx:for-item="item"  wx:for-item="item">
+      <text class="{{price_id==item.id?'active':''}}"  
+            data-id="{{item.id}}" 
+            data-index="1" 
+            data-txt="{{item.title}}" 
+            bindtap="filter">{{item.title}}</text>
+    </block>
+  </view>
+
+  <view class="tabLayer" hidden="{{tab[2]}}">
+    <block wx:for="{{commentList}}"  wx:for-item="item">
+      <text class="{{comment_id==item.id?'active':''}}" 
+            data-id="{{item.id}}" 
+            data-index="2" 
+            data-txt="{{item.title}}" 
+            bindtap="filter">{{item.title}}</text>
+    </block>
+  </view>
+ 
+  <scroll-view class='list'>
+    <block wx:for='{{dataList}}' wx:key='list' wx:for-item="item">
+      <view class="list_item">
+        <navigator url='../detail/detail?id={{item._id}}'>
+          <view class='img'>
+            <image src="{{imghref}}{{item.bookInfo.image}}"  mode="scaleToFill"/>
+          </view>
+          
+          <view class='info'>
+            <view class='title'>《{{item.bookInfo.title}}》</view>
+            <view class='price'>￥{{item.bookSale}}</view>
+            <view class='num'>评价： 0</view>
+          </view>
+          </navigator>
+        <view class='clear'></view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

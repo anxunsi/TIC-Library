@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="all">
+  <view class='search-top'>
+    <view class="index_search_btn" bindtap="search_click">
+      <image class="index_search" src="../../images/search.png"></image>
+      <text>搜索书籍</text>
+    </view>
+  </view>
+
+  <view >
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+      <block wx:for="{{tabList}}"  wx:for-item="item">
+        <view class="tab-item {{currentTab==item.id?'active':''}}"  data-current="{{item.id}}" bindtap="swichNav">{{item.title}}</view>
+      </block>
+    </scroll-view>
+    
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+     style="height:{{winHeight}}rpx">
+        <swiper-item wx:for="{{tabList}}">
+            <scroll-view scroll-y="true" class="scoll-h" >
+                <view class='list'>
+                  <block wx:for='{{dataList}}' wx:key='list' wx:for-item="item">
+                    <view class="list_item">
+                      <view class='left'>
+                        <navigator url='../detail/detail?id={{item._id}}'>
+                          <view class='img'>
+                            <image src="{{item.bookInfo.image}}"  mode="widthFix"/>
+                          </view>
+                          <view class='info'>
+                            <view class='title'>{{item.bookInfo.title}}</view>
+                            <view class='price'>￥{{item.bookSale}}</view>
+                            <view class='blank'></view>
+                            <view class='user-info'>卖家: {{item.saler}}</view>
+                          </view>
+                        </navigator>
+                      </view>
+                    </view>
+                  </block>
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+  </view>
+</view>

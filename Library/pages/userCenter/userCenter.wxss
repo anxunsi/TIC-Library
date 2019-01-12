@@ -1,0 +1,74 @@
+/* pages/userCenter/userCenter.wxss */
+.all{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: whitesmoke;
+}
+.user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 750rpx;
+  height: 250rpx;
+  background-color:#FF6347;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userLogin-btn{
+  font-display: center;
+  height: 60rpx;
+  width: 200rpx;
+  font-size: 32rpx;
+  border-radius: 30rpx;
+}
+.userFeedback-btn{
+  width: 100%;
+  padding: 0;
+  background: none;
+  margin-left: 10rpx;
+  font-size: 32rpx;
+  text-align: left;
+}
+.userFeedback-btn::after{
+  border: none;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color:white;
+}
+.usermotto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10rpx;
+  width: 750rpx;
+  height: 100rpx;
+  background: white;
+}
+.img{
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+.img_go{
+  height: 60rpx;
+  width: 60rpx;
+  position: fixed;
+  right: 50rpx;
+}
+.user-motto{
+  font-size: 32rpx;
+}
+.blank{
+  margin-top: 50rpx;
+}

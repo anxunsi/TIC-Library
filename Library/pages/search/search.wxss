@@ -1,0 +1,169 @@
+/* pages/search/search.wxss */
+.all {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.search-top{
+  background: #FF6347;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position:fixed;
+  top:0;
+  z-index: 1;
+}
+.index_search_btn {
+  height: 70rpx;
+  width: 90%;
+  background-color: white;
+  color: #a1a1a1;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 35px;
+}
+
+.index_search {
+  width: 16px;
+  height: 16px;
+  position: fixed;
+  left: 70rpx;
+}
+.search_input{
+  position: fixed;
+  left: 150rpx;
+  width: 60%;
+}
+.clear{
+  clear: both;
+  overflow: hidden;
+}
+ 
+.tabTit{
+  height:90rpx;
+  line-height: 90rpx;
+  border-bottom: solid 1px #eee;
+  position:fixed;
+  top:80rpx;
+  width: 750rpx;
+  z-index: 1;
+  background: #fff;
+  font-size:15px;
+  text-align: center;
+}
+ 
+ 
+ 
+.tabTit .active{
+  color:#e64340;
+  background: #fff;
+}
+ 
+.tabTit .active image{
+  transform: rotate(180deg);
+  background: none;
+}
+ 
+.tabTit image{
+  width:26rpx;
+  height:26rpx;
+  vertical-align: middle;
+  margin-left: 5px;
+ 
+}
+ 
+.tabLayer{
+  box-shadow: 0 5px 5px rgba(0,0,0,.15);
+  width:750rpx;
+  overflow: hidden;
+  position: fixed;
+  top:90rpx;
+  z-index: 1;
+  background: #fff;
+  padding-bottom: 40rpx;
+  border-bottom: solid 1px #eee;
+  text-align: center;
+}
+.tabLayer text{
+  width:210rpx;
+  height:60rpx;
+  line-height:60rpx;
+  float:left;
+  border: solid 1px #eee;
+  margin:20rpx 0 0 26rpx;
+  font-size:15px;
+}
+.tabLayer .active{
+  color:#e64340;
+  border-color:#e64340;
+  }
+ 
+.flex1 {
+    flex: 1;
+    overflow: hidden;
+    display: block;
+}
+ 
+/*弹性盒模型*/
+.box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+ 
+navigator{
+  display:inline;
+}
+.list{
+  margin-top: 170rpx;
+}
+ 
+.list .list_item{
+  margin-top:10px;
+  padding:10px;
+  height:100px;
+  border-bottom:1px solid #E8E8E8;
+}
+.list .list_item .img{
+  float:left;
+  width:30%;
+  height:100%;
+}
+.list .list_item .img image{
+   width:100%;
+   height:100%;
+}
+ 
+.list .list_item .info{
+  width:70%;
+  float:right;
+  height:100px;
+  position:relative;
+}
+.list .list_item .info .title{
+  color:#333;
+  margin-left:10px;
+  font-size: 15px;
+}
+ 
+.list .list_item .info .price{
+  color:#FF2727;
+  margin-left:10px;
+  margin-top:10px;
+  font-size:15px;
+}
+ 
+.list .list_item .info .num{
+  position: absolute;
+  left:0px;
+  bottom:10px;
+  color:#747474;
+  margin-left:10px;
+  font-size:15px;
+}

@@ -1,0 +1,24 @@
+/* pages/about/about.wxss */
+.all{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img{
+  height: 200rpx;
+  width: 200rpx;
+  margin-top: 50rpx;
+}
+.title{
+  font-size: 44rpx;
+  margin-top: 50rpx;
+}
+.version{
+  font-size: 44rpx;
+  margin-top: 30rpx;
+}
+.content{
+  font-size: 38rpx;
+  width: 80%;
+  margin-top: 50rpx;
+}
