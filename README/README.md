@@ -15,4 +15,4 @@
    ![change env1](change-env.JPG)
    ![change env2](env-changed.JPG)
 6. 在云开发里创建三个叫"publish", "sell", "buy"的collection
-   ![create collection](create-collection.JPG)
+   ![create collection](create-collection.png)
