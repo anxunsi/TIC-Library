@@ -22,7 +22,9 @@
 
    ![change env2](env-changed.JPG)
 6. 在云开发里创建四个叫"publish", "sell", "buy", "userInfo"的collection
-   
+
+   publish的权限设置那里要设为所有人可读
+
    ![create collection](create-collection.png)
    
 **注意**如果控制台提示"wx-server-sdk"找不到，请cd到cloudfunctions，分别cd到login和update文件夹下，查看有无"node_modules"文件夹，如果有直接跳下一步上传，否则输入```npm uninstall --save wx-server-sdk@latest```(需要安装node.js和npm，请自行百度)，然后在开发者工具两个文件夹右键-"上传所有文件"。
