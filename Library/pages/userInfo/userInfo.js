@@ -124,6 +124,7 @@ Page({
         })
       },
       fail: err => {
+        console.log(err)
         wx.hideLoading()
 
         wx.showToast({

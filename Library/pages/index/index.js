@@ -55,6 +55,7 @@ Page({
 
     const db = wx.cloud.database()
     db.collection('publish').get().then(res => {
+      console.log(res)
       that.setData({
         dataList: res.data
       })
