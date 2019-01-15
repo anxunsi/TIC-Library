@@ -6,6 +6,7 @@
 ├── Library \\ 小程序源文件
 ├── README \\ 使用说明
 ├── modify-plan \\ 修改方案
+├── bug-list \\ bug列表
 ```
 
 ## 开发指引
@@ -16,4 +17,5 @@
 - [html学习](http://www.w3school.com.cn/html/index.asp)
 - [css学习](http://www.w3school.com.cn/css/index.asp)
 - [js学习](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
+- [markdown学习](http://www.markdown.cn/#overview)
 - [相似开源项目](https://github.com/imageslr/weapp-library)
