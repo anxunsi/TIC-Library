@@ -1,6 +1,4 @@
-﻿try push12345
-
-# SZUTIC Library Wechat Program
+﻿# SZUTIC Library Wechat Program
 
 ## 文件结构
 ```
