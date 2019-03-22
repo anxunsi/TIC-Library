@@ -1,4 +1,4 @@
-12345
+﻿try push12345
 
 # SZUTIC Library Wechat Program
 
