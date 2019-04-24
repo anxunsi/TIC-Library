@@ -1,7 +1,7 @@
 <!--pages/userInfo/userInfo.wxml-->
 <view class='all'>
   <view class='infoList'>
-    <text class='infoTitle'>性别</text>
+    <text class='infoTitle'>姓名</text>
     <picker class='infoContent'
             mode='selector' 
             range='{{selection}}'
@@ -10,22 +10,9 @@
             <view>{{selection[gender]}}</view></picker>
     <image class='icon-right' src='../../images/right.png'></image>
   </view>
-  
-  <view class='infoList'>
-    <text class='infoTitle'>出生日期</text>
-    <picker class='infoContent'
-            mode='date' 
-            start='1970-01-01'
-            end='{{todate}}'
-            value='{{birthday}}'
-            fields='day'
-            bindchange='changeBirthday'>
-            <view>{{birthday}}</view></picker>
-    <image class='icon-right' src='../../images/right.png'></image>
-  </view>
 
   <view class='infoList'>
-    <text class='infoTitle'>个人介绍</text>
+    <text class='infoTitle'>微信号</text>
     <textarea fixed='true'
               class='infoText'
               placeholder='{{introduce}}'
@@ -43,16 +30,6 @@
               placeholder='{{phone}}'
               maxlength='11' 
               bindblur='changePhone'></textarea>
-    <image class='icon-right' src='../../images/right.png'></image>
-  </view>
-  
-  <view class='infoList'>
-    <text class='infoTitle'>收货地址</text>
-    <textarea fixed='true'
-              class='infoText'
-              placeholder='{{address}}'
-              maxlength='50' 
-              bindblur='changeAddress'></textarea>
     <image class='icon-right' src='../../images/right.png'></image>
   </view>
 

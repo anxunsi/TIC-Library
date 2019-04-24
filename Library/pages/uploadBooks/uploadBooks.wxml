@@ -2,40 +2,30 @@
 <view class='all'>
   <view class='infoList'>
     <text class='infoTitle'>书名</text>
-    <text class='infoContent'>{{bookInfo.title}}</text>
+    <input class='infoContent' value='{{bookInfo.title}}'></input>
   </view>
 
   <view class='infoList'>
     <text class='infoTitle'>作者</text>
-    <text class='infoContent'>{{bookInfo.author}}</text>
+    <input class='infoContent' value='{{bookInfo.author}}'></input>
   </view>
 
   <view class='infoList'>
     <text class='infoTitle'>出版社</text>
-    <text class='infoContent'>{{bookInfo.publisher}}</text>
+    <input class='infoContent' value='{{bookInfo.publisher}}'></input>
   </view>
 
   <view class='infoList'>
     <text class='infoTitle'>出版年</text>
-    <text class='infoContent'>{{bookInfo.pubdate}}</text>
+    <input class='infoContent' value='{{bookInfo.pubdate}}'></input>
   </view>
 
   <view class='infoList'>
     <text class='infoTitle'>原价</text>
-    <text class='infoContent'>{{bookInfo.price}}</text>
+    <input class='infoContent' value='{{bookInfo.price}}'></input>
   </view>
 
   <view class='blank'></view>
-
-  <view class='infoList'>
-    <text class='infoTitle'>出售价</text>
-    <input class='infoContent' placeholder='{{bookSale}}' maxlength='6' bindinput='changeBookSale'></input>
-  </view>
-
-  <view class='infoList'>
-    <text class='infoTitle'>出售数量</text>
-    <input class='infoContent' placeholder='{{bookNumber}}'  maxlength='3' bindinput='changeBookNumber'></input>
-  </view>
 
   <view class='imgList'>
     <block>
