@@ -12,6 +12,8 @@
 	"appid": "wx79009c9fa709a383",
 	"projectname": "ticLibrary",
 	"libVersion": "2.4.2",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

@@ -4,6 +4,18 @@
 ```
 .
 ├── Library \\ 小程序源文件
+|	├── pages
+|	|	├── about \\ 关于
+|	|	├── detail \\ 书籍详情
+|	|	├── index \\ 首页
+|	|	├── mybuy \\ 我买到的
+|	|	├── mypublish \\ 我的发布
+|	|	├── mysell \\ 我卖出的
+|	|	├── publish \\ 发布
+|	|	├── search \\ 搜索
+|	|	├── uploadBooks \\ 发布详情填写
+|	|	├── userCode \\ 用户中心
+|	|	├── userInfo \\ 用户信息
 ├── README \\ 使用说明
 ├── modify-plan \\ 修改方案
 ├── bug-list \\ bug列表
@@ -20,5 +32,5 @@
 - [markdown学习](http://www.markdown.cn/#overview)
 - [相似开源项目](https://github.com/imageslr/weapp-library)
 
-asdfasdf
+
 
