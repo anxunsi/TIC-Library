@@ -27,19 +27,18 @@
 
    ![create collection](create-collection.png)
    
+
 **注意**如果控制台提示"wx-server-sdk"找不到，请cd到cloudfunctions，分别cd到login和update文件夹下，查看有无"node_modules"文件夹，如果有直接跳下一步上传，否则输入```npm uninstall --save wx-server-sdk@latest```(需要安装node.js和npm，请自行百度)，然后在开发者工具两个文件夹右键-"上传所有文件"。
 
 # 开发指引
 
 ## 开发计划
 
-### 第一阶段
+### 分工
 
-- 修改数据库（见下）    陈梓健
-- 修改[修改计划](https://github.com/anxunsi/TIC-Library/tree/master/modify-plan/README.md)中的1~10点
-    - 修改首页、用户信息修改页    赵钰腾
-    - 修改书籍详情页    古陶睿
-    - 修改用户中心、底栏    周韬
+- 首页、书籍详情、搜索、发布、发布详情    陈梓健、赵钰腾
+- 用户中心、我买到的、我的发布、我卖出的、关于    古陶睿
+- UI整体设计    周韬
 
 ## 数据库对象
 
