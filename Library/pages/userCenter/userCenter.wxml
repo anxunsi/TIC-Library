@@ -19,29 +19,17 @@
     <image class='img_go' src='../../images/right.png' mode='scaleToFill'></image>
   </view>
 
-  <view class="usermotto" bindtap='mysell'>
-    <image class='img' src='../../images/sell.png' mode='scaleToFill'></image>
-    <text class="user-motto" >我卖出的</text>
-    <image class='img_go' src='../../images/right.png' mode='scaleToFill'></image>
-  </view>
-
   <view class="usermotto" bindtap='mybuy'>
     <image class='img' src='../../images/buy.png' mode='scaleToFill'></image>
-    <text class="user-motto" >我买到的</text>
+    <text class="user-motto" >借阅书籍</text>
     <image class='img_go' src='../../images/right.png' mode='scaleToFill'></image>
   </view>
 
   <view class='blank'></view>
-
-  <view class="usermotto">
-    <image class='img' src='../../images/feedback.png' mode='scaleToFill'></image>
-    <button class="userFeedback-btn" open-type='contact'>问题反馈</button>
-    <image class='img_go' src='../../images/right.png' mode='scaleToFill'></image>
-  </view>
   
   <view class="usermotto" bindtap='about'>
     <image class='img' src='../../images/about.png' mode='scaleToFill'></image>
-    <text class="user-motto" >关于二手书城</text>
+    <text class="user-motto" >借阅历史</text>
     <image class='img_go' src='../../images/right.png' mode='scaleToFill'></image>
   </view>
 </view>
