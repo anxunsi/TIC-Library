@@ -10,6 +10,7 @@ Page({
     bookSale: 0,
     bookNumber: 0,
     number: 1,
+    surplus: 0,
     selection: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
     saler: '',
 
@@ -21,7 +22,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     var that = this
 
     that.setData({
@@ -32,7 +33,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onShow: function (options) {
+  onShow: function(options) {
     var that = this
 
     wx.showLoading({
@@ -45,7 +46,7 @@ Page({
   /**
    * 预览图片
    */
-  previewImage: function (e) {
+  previewImage: function(e) {
     var current = e.target.dataset.src;
     var img = this.data.image;
     var imglist = [];
@@ -55,14 +56,14 @@ Page({
     }
     wx.previewImage({
       current: current, // 当前显示图片的http链接  
-      urls: imglist// 需要预览的图片http链接列表  
+      urls: imglist // 需要预览的图片http链接列表  
     })
   },
 
   /**
    * 加载数据
    */
-  getGood: function(){
+  getGood: function() {
     var that = this
 
     const db = wx.cloud.database();
@@ -76,6 +77,7 @@ Page({
         saler: res.data[0].saler,
         date: res.data[0].date,
         imageID: res.data[0].imageID,
+        surplus: res.data[0].surplus,
 
         'image[0]': res.data[0].bookInfo.image,
       })
@@ -94,28 +96,28 @@ Page({
   },
 
   /**
-   * 购买
+   * 借阅
    */
-  buy:function (e) {
+  buy: function(e) {
     var that = this
 
     that.setData({
       number: e.detail.value
     })
 
-    if (that.data.bookNumber - that.data.number < 0) {
+    if (that.data.surplus - that.data.number < 0) {
       wx.showToast({
-        title: '购买数量不正确',
+        title: '剩余不足',
         icon: 'none'
       })
     } else if (that.data.number == 0) {
       wx.showToast({
-        title: '购买数量不正确',
+        title: '借阅数量不正确',
         icon: 'none'
       })
     } else {
       wx.showLoading({
-        title: '购买中'
+        title: '借阅中'
       })
 
       //更新发布数据库
@@ -128,16 +130,17 @@ Page({
         },
         success: res => {
           that.setData({
-            bookNumber: that.data.bookNumber - that.data.number,
+            surplus: that.data.surplus - that.data.number,
           })
 
           that.refleshSell()
           that.refleshBuy()
+          that.refleshPublish()
 
           wx.hideLoading()
 
           wx.showToast({
-            title: '购买成功',
+            title: '借阅成功',
             icon: 'success',
             duration: 2000,
             mask: true
@@ -145,7 +148,7 @@ Page({
         },
         fail: err => {
           wx.showToast({
-            title: '购买失败',
+            title: '借阅失败',
             icon: 'fail',
             duration: 2000,
             mask: true
@@ -158,7 +161,7 @@ Page({
   /**
    * 更新卖出数据库
    */
-  refleshSell: function () {
+  refleshSell: function() {
     var that = this
     var time = new Date()
     var date = time.getFullYear() + '-' + (time.getMonth() + 1) + '-' + time.getDate()
@@ -179,7 +182,7 @@ Page({
   /**
    * 更新买入数据库
    */
-  refleshBuy: function () {
+  refleshBuy: function() {
     var that = this
     var time = new Date()
     var date = time.getFullYear() + '-' + (time.getMonth() + 1) + '-' + time.getDate()
@@ -193,6 +196,21 @@ Page({
         buyNumber: that.data.number,
         buyDate: date,
         saler: that.data.saler,
+      }
+    })
+  },
+  /**
+   * 更新发布数据库
+   */
+  refleshPublish: function() {
+    var that = this
+    const db = wx.cloud.database()
+    db.collection('buy').doc(that.data.id).update({
+      data: {
+        surplus: that.data.surplus
+      },
+      success: function(res) {
+        console.log(res.data)
       }
     })
   }

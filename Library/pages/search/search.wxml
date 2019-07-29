@@ -26,20 +26,10 @@
   </view>
 
   <view class="tabLayer" hidden="{{tab[1]}}">
-    <block wx:for="{{commentList}}" wx:for="{{priceList}}"  wx:for-item="item"  wx:for-item="item">
-      <text class="{{price_id==item.id?'active':''}}"  
-            data-id="{{item.id}}" 
-            data-index="1" 
-            data-txt="{{item.title}}" 
-            bindtap="filter">{{item.title}}</text>
-    </block>
-  </view>
-
-  <view class="tabLayer" hidden="{{tab[2]}}">
     <block wx:for="{{commentList}}"  wx:for-item="item">
       <text class="{{comment_id==item.id?'active':''}}" 
             data-id="{{item.id}}" 
-            data-index="2" 
+            data-index="1" 
             data-txt="{{item.title}}" 
             bindtap="filter">{{item.title}}</text>
     </block>
@@ -55,7 +45,6 @@
           
           <view class='info'>
             <view class='title'>《{{item.bookInfo.title}}》</view>
-            <view class='price'>￥{{item.bookSale}}</view>
             <view class='num'>评价： 0</view>
           </view>
           </navigator>

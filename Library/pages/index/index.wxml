@@ -28,9 +28,8 @@
                           </view>
                           <view class='info'>
                             <view class='title'>{{item.bookInfo.title}}</view>
-                            <view class='price'>￥{{item.bookSale}}</view>
+                            <view class='price'>剩余{{item.surplus}}本</view>
                             <view class='blank'></view>
-                            <view class='user-info'>卖家: {{item.saler}}</view>
                           </view>
                         </navigator>
                       </view>

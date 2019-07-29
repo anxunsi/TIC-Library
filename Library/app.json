@@ -14,8 +14,8 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FF6347",
-    "navigationBarTitleText": "二手书城",
+    "navigationBarBackgroundColor": "#00BBEE",
+    "navigationBarTitleText": "腾创书库",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

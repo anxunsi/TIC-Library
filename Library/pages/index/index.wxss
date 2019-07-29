@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 .search-top{
-  background: #FF6347;
+  background: #00BBEE;
   height: 80rpx;
   width: 100%;
   display: flex;
